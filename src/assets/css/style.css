@@ -1293,6 +1293,10 @@ header .box-location:before {
 margin-bottom: 20px
 }
 
+.mb-10{
+  margin-bottom: 10px
+  }
+
 .mb-50{
   margin-bottom: 50px
   }

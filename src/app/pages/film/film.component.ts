@@ -30,7 +30,7 @@ export class FilmComponent implements OnInit {
 
   viewFilmDetail(id) {
     console.log("filmId: " + id)
-    this.route.navigate(['/film_detail', id]);
+    this.route.navigate(['/films', id]);
   }
 
 

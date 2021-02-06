@@ -30,7 +30,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AsyncPipe } from '@angular/common';
-import { WeatherDetailComponent } from './pages/weather-detail/weather-detail.component';
+import { FilmDetailComponent } from './pages/film-detail/film-detail.component';
 import { FilmAddComponent } from './pages/film-add/film-add.component';
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { FilmAddComponent } from './pages/film-add/film-add.component';
     HeaderComponent,
     FooterComponent,
     FilmComponent,
-    WeatherDetailComponent,
+    FilmDetailComponent,
     FilmAddComponent
   ],
   imports: [

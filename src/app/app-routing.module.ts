@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FilmAddComponent } from './pages/film-add/film-add.component';
 import { HomeComponent } from './pages/home/home.component';
-import { WeatherDetailComponent } from './pages/weather-detail/weather-detail.component';
+import { FilmDetailComponent } from './pages/film-detail/film-detail.component';
 
 const routes: Routes = [
   {
@@ -19,8 +19,8 @@ const routes: Routes = [
     component : FilmAddComponent
   },
   {
-    path: 'weather/:id',
-    component : WeatherDetailComponent
+    path: 'films/:id',
+    component : FilmDetailComponent
   }
   ];
   
