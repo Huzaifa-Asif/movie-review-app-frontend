@@ -32,6 +32,25 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
 
   login() {
+
+    if(this.login_data.email === '') {
+      this.toastrService.error("Email is required");
+      return false;
+    }
+    var emailFilter = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+    if(!emailFilter.test(this.login_data.email))
+    {
+      this.toastrService.error("Please provide valid email");
+      return false;
+    }
+    if(this.login_data.password === '') {
+      this.toastrService.error("Password is required");
+      return false;
+    }
+    this.sendLoginRequest();
+  }
+
+  sendLoginRequest(){
     this.spinner.show();
     this.spinnerText = 'Logging in..';
    
@@ -52,11 +71,9 @@ export class LoginComponent implements OnInit {
         this.toastrService.error("kindly try again");
       }
 
-    
-
+  
     });
   }
-
 
  register() {
    this.route.navigate(['/register_user']);
