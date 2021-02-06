@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,NavigationEnd } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../../../services/auth/auth.service';
 declare var $:any;
 @Component({
   selector: 'app-header',
@@ -8,17 +9,19 @@ declare var $:any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  role : any;
+  sessionData : any;
   currentUrl: string;
   allOrders=[]
   assignedOrders=[];
   showMenuu=false;
-  constructor(private router: Router,location : Location) {
+  constructor(private router: Router,location : Location, private auth: AuthService,) {
     router.events.subscribe((_: NavigationEnd) => this.currentUrl = this.router.url);
     this.currentUrl =location.path();
    }
 
   ngOnInit() {
+    this.sessionData = this.auth.getLocalTokens();
+  
     setTimeout(() => {
       if ($(window).width() > 300 && $(window).width() < 767) {
         $(".menu").css({"display":"none"});
@@ -42,4 +45,8 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  Logout(){
+    this.auth.clearLocalTokens()
+    this.router.navigate(['/login']);
+  }
 }

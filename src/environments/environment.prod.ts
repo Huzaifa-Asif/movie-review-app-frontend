@@ -13,5 +13,5 @@
 export const environment = {
   production: true,
   // apiURL: 'http://localhost:3300'
-  apiURL: 'https://scan-and-order-backend.herokuapp.com'
+  apiURL: 'https://movie-review-backend-app.herokuapp.com'
 };

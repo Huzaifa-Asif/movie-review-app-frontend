@@ -32,6 +32,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AsyncPipe } from '@angular/common';
 import { FilmDetailComponent } from './pages/film-detail/film-detail.component';
 import { FilmAddComponent } from './pages/film-add/film-add.component';
+import { RegisterUserComponent } from './pages/register-user/register-user.component';
+import { LoginComponent } from './pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { FilmAddComponent } from './pages/film-add/film-add.component';
     FooterComponent,
     FilmComponent,
     FilmDetailComponent,
-    FilmAddComponent
+    FilmAddComponent,
+    LoginComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
@@ -52,12 +56,6 @@ import { FilmAddComponent } from './pages/film-add/film-add.component';
     NgxSpinnerModule,
     NgxFileDropModule,
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA_QD2_rlwEFGhCK0oj2n6cixsvX0D3zgk',
-      libraries: ['places']
-    }),
-    AgmDirectionModule,
-    GooglePlaceModule,
     NgxPaginationModule,
     MDBBootstrapModule.forRoot(),
   ],

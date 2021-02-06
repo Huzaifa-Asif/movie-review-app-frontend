@@ -47,7 +47,9 @@
             <ul class="menu">
               <li [class.active]="currentUrl == '/films'"><a routerLink="/films">Home</a></li>
               <li [class.active]="currentUrl == '/films/create'"><a routerLink="/films/create">Add Film</a></li>
-              <li [class.active]="currentUrl == '/login'"><a routerLink="/login">login</a></li>
+              <li *ngIf="sessionData == null" [class.active]="currentUrl == '/login'"><a routerLink="/login">login</a></li>
+              <li *ngIf="sessionData == null" [class.active]="currentUrl == '/register_user'"><a routerLink="/register_user">Register</a></li>
+              <li *ngIf="sessionData != null"><a (click)="Logout()">Logout</a></li>
 
             </ul>
           </nav>
