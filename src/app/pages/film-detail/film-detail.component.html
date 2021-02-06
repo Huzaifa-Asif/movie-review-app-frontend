@@ -72,28 +72,30 @@
       </div>
     </form>
 
-    <h4 *ngIf="sessionData == null">Kinldy login to comment on this film</h4>
+    <h4 *ngIf="sessionData == null" style="color: red">Kinldy login to comment on this film</h4>
 
 
-
+    <br>
   
-        <div *ngFor="let comment of commentList">
+        <h3 *ngIf="commentList && commentList.length>0">User Comments</h3>
+        <div *ngFor="let comment of commentList" class="comment_list">
 
 
           <div class="row">
-          <div class="col-2">
-            <div class="message-avatar"><img src="assets/images/meUser.jpg" alt=""/></div>
+          <div class="col-5" class="user_detail">
+            <img  class="message-avatar" src="assets/images/user.png" alt=""/>
+            <b> {{comment.userId.name}}</b>
           </div>
-          <div class="col-10">
+          <div class="col-7">
             <!-- <p>{{comment.text}}</p> -->
-            <p>{{comment.text}}</p>
-            <p>{{comment.createdAt | date: EEEE}}</p>
+            <p class="comment-text">{{comment.text}}</p>
+            <p class="comment-date">{{comment.createdAt | date: EEEE}}</p>
           </div>
 
           </div>
 
                  
-             </div>
+        </div>
 
 
         </div>      

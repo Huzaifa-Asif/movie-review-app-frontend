@@ -39,6 +39,8 @@ export class FilmDetailComponent implements OnInit {
 
   ngOnInit() {
     this.sessionData = this.auth.getLocalTokens();
+    console.log("this.sessionData")
+    console.log(this.sessionData)
     this.getFilmDetail();
     this.getAllComments();
   }
@@ -69,8 +71,8 @@ export class FilmDetailComponent implements OnInit {
     }
 
     const data ={
-      filmId: this.id,
       userId: this.sessionData.id,
+      filmId: this.id,
       text: this.commentText
     }
     this._sendSaveRequest(data);

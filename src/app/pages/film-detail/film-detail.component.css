@@ -7,3 +7,24 @@
     height:40px;
     width: 40px;
   }
+
+  .comment_list{
+    margin-top: 20px;
+    background: rgb(231, 230, 230);
+    border-radius: 100px;
+  }
+
+  .user_detail{
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+
+  .comment-text{
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .comment-date{ 
+    font-size: 12px;
+  }

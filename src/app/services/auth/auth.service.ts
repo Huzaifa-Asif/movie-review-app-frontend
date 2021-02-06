@@ -26,7 +26,7 @@ export class AuthService {
        
         if (result.status) {
           this.user = result.data;
-          this.saveLocalTokens(result._id, result.name, result.email) 
+          this.saveLocalTokens(result.data._id, result.data.name, result.data.email) 
         }
         resolve(result);
       }, () => {
