@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import * as $ from 'jquery';
 import { HomeComponent } from './pages/home/home.component';
-import { WeatherComponent } from './pages/weather/weather.component';
+import { FilmComponent } from './pages/film/film.component';
 import { HeaderComponent } from './pages/components/header/header.component';
 import { FooterComponent } from './pages/components/footer/footer.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -30,7 +30,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AsyncPipe } from '@angular/common';
-import { SearchComponent } from './pages/search/search.component';
 import { WeatherDetailComponent } from './pages/weather-detail/weather-detail.component';
 import { FilmAddComponent } from './pages/film-add/film-add.component';
 @NgModule({
@@ -39,8 +38,7 @@ import { FilmAddComponent } from './pages/film-add/film-add.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SearchComponent,
-    WeatherComponent,
+    FilmComponent,
     WeatherDetailComponent,
     FilmAddComponent
   ],

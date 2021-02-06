@@ -1,0 +1,13 @@
+
+
+
+<div class="card mb-20" style="width:100%; " *ngFor="let film of filmData">
+  <img class="card-img-top" src="{{film.photo}}" alt="{{film.name}}">
+  <div class="card-body">
+    <h4 class="card-title">{{film.name}}</h4>
+    <p class="card-text">{{film.description.substring(0,230)}} <span *ngIf="film.description.length>230">....</span></p>
+    <!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+  </div>
+</div>
+
+
