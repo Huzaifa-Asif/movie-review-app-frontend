@@ -1,0 +1,58 @@
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-1 col-lg-3 visible-sm visible-xs">
+        <!-- box-telephone -->
+        <div class="box-telephone ">
+          <address>
+            <span class="icon icon-telephone"></span>+92 336 0508401
+          </address>
+          <div class="time hidden-sm hidden-xs">For Customer Support 24/7</div>
+        </div>
+        <!-- /box-telephone -->
+      </div>
+      <div class="col-sm-12 col-md-5 col-lg-6">
+        <!-- logo -->
+        <a class="logo" title="Weather App" routerLink="/" ><img class="img-responsive"
+          src="assets/images/logo-header.png" alt="Weather App"></a>
+        <!-- /logo -->
+      </div>
+
+      <div class="col-sm-12 col-md-3 col-lg-3 hidden-sm hidden-xs">
+      </div> 
+
+      
+      <div class="col-sm-12 col-md-4 col-lg-3 hidden-sm hidden-xs">
+        <!-- box-telephone -->
+        <div class="box-telephone ">
+          <address>
+            +92 336 0508401
+                   </address>
+          <div class="time hidden-sm">For Customer Support 24/7</div>
+        </div>
+        <!-- /box-telephone -->
+      </div>
+    </div>
+  </div>
+  <div class="box-nav">
+    <div class="container">
+      <div class="row">
+        <div class="center">
+          <a id="touch-menu" class="mobile-menu" href="javascript:;" (click)="showMenu()">
+            <span class="icon-menu-button-of-three-horizontal-lines"></span>
+          </a>
+
+          <nav class="top-menu">
+            <ul class="menu">
+              <li [class.active]="currentUrl == '/films'"><a routerLink="/films">Home</a></li>
+              <li [class.active]="currentUrl == '/films/create'"><a routerLink="/films/create">Add Film</a></li>
+              <li [class.active]="currentUrl == '/login'"><a routerLink="/login">login</a></li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

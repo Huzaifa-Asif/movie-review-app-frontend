@@ -1,0 +1,12 @@
+.text-justify{
+    text-align: justify!important;
+}
+
+.btn-danger {
+    margin-right: 20px;
+}
+
+.weather-img{
+    height: 70%;
+    width: 70%;
+}
